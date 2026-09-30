@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebNova - AI Agency & Learning Platform</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090514',
+                        darkCard: '#130a24',
+                        neonPurple: '#a855f7',
+                        neonPink: '#ec4899',
+                        neonBlue: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #090514; color: #f3f4f6; overflow-x: hidden; }
+        .glow-purple { box-shadow: 0 0 25px rgba(168, 85, 247, 0.4); }
+        .glow-pink { box-shadow: 0 0 25px rgba(236, 72, 153, 0.4); }
+        .glow-text { text-shadow: 0 0 10px rgba(168, 85, 247, 0.7); }
+        .glass-panel { background: rgba(19, 10, 36, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(168, 85, 247, 0.2); }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(168, 85, 247, 0.6); }
+            50% { box-shadow: 0 0 30px rgba(236, 72, 153, 0.9); }
+        }
+        .chatbot-btn-glow { animation: pulse-glow 3s infinite; }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 min-h-screen flex flex-col selection:bg-purple-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-purple-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center glow-purple">
+                    <i class="fa-solid fa-brain text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-wider bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent glow-text">WebNova</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#services" class="hover:text-purple-400 transition">AI Services</a>
+                <a href="#courses" class="hover:text-purple-400 transition">Academy</a>
+                <a href="#community" class="hover:text-purple-400 transition">Community</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/8801804985929" target="_blank" class="hidden sm:flex items-center space-x-2 bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/40 text-emerald-400 px-4 py-2 rounded-xl transition text-sm font-semibold">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>01804985929</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61594799405714" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg glow-purple transition">
+                    Facebook
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-20 pb-32 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 bg-purple-950/60 border border-purple-500/30 px-4 py-1.5 rounded-full text-xs font-semibold text-purple-300 mb-8 glow-purple">
+                <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span>
+                <span>Next-Gen AI Agency & Learning Ecosystem</span>
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+                Empowering the Future with <br>
+                <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent glow-text">Artificial Intelligence</span>
+            </h1>
+            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-gray-400 mb-10">
+                Transforming businesses with autonomous AI solutions, cutting-edge software development, and world-class training.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#services" class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-8 py-4 rounded-2xl font-bold shadow-xl glow-purple transition transform hover:scale-105">
+                    Explore AI Solutions
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61594799405714" target="_blank" class="w-full sm:w-auto glass-panel hover:bg-purple-900/20 text-gray-200 px-8 py-4 rounded-2xl font-bold border border-purple-500/30 transition flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-facebook text-blue-400 text-xl"></i>
+                    <span>Visit Facebook Profile</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Mini Apps -->
+    <section id="services" class="py-24 bg-darkCard/40 border-y border-purple-950/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Our Core AI Services & Interactive Mini-Apps</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Explore state-of-the-art AI solutions and test our built-in web tools for free right inside WebNova!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Cowlf Design App -->
+                <div class="glass-panel p-8 rounded-3xl hover:border-purple-500/50 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-purple-600/20 border border-purple-500/40 flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Cowlf (Design Editor)</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">A Canva-like free graphics and text design tool. Create custom digital banners, add shapes, text, and export instantly.</p>
+                    </div>
+                    <button onclick="openMiniApp('cowlf')" class="w-full bg-purple-600/30 hover:bg-purple-600/50 border border-purple-500/40 text-purple-200 py-3 rounded-xl font-semibold transition flex items-center justify-center space-x-2">
+                        <span>Launch Cowlf</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Sfotiyar Music Player -->
+                <div class="glass-panel p-8 rounded-3xl hover:border-purple-500/50 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-600/20 border border-pink-500/40 flex items-center justify-center text-pink-400 text-2xl mb-6 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Sfotiyar (Music Player)</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">A Spotify-like futuristic audio player featuring ambient synthetic beats, track controls, and visualizer.</p>
+                    </div>
+                    <button onclick="openMiniApp('sfotiyar')" class="w-full bg-pink-600/30 hover:bg-pink-600/50 border border-pink-500/40 text-pink-200 py-3 rounded-xl font-semibold transition flex items-center justify-center space-x-2">
+                        <span>Launch Sfotiyar</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Video Generator Tool -->
+                <div class="glass-panel p-8 rounded-3xl hover:border-purple-500/50 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Video Generator</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">An AI prompt-to-video rendering simulation tool. Type any prompt and generate custom video animations for free.</p>
+                    </div>
+                    <button onclick="openMiniApp('videoGen')" class="w-full bg-blue-600/30 hover:bg-blue-600/50 border border-blue-500/40 text-blue-200 py-3 rounded-xl font-semibold transition flex items-center justify-center space-x-2">
+                        <span>Launch Video Gen</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">Live Community Feed & Wall</h2>
+                <p class="text-gray-400">Leave your comments or questions below. Our AI assistant or visitors can respond in real time!</p>
+            </div>
+
+            <div class="glass-panel p-6 sm:p-8 rounded-3xl mb-8">
+                <form id="communityForm" onsubmit="handleCommunityPost(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" id="commName" placeholder="Your Name / আপনার নাম" required class="bg-darkBg/80 border border-purple-900/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 text-gray-200">
+                        <input type="text" id="commTitle" placeholder="Topic / Subject (Optional)" class="bg-darkBg/80 border border-purple-900/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 text-gray-200">
+                    </div>
+                    <textarea id="commMessage" rows="3" placeholder="Write your comment or question here... (যেমন: এটা কার ওয়েবসাইট?)" required class="w-full bg-darkBg/80 border border-purple-900/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 text-gray-200 resize-none"></textarea>
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-md transition flex items-center space-x-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Post Message</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="communityFeedList" class="space-y-4">
+                <!-- Dynamically populated messages -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-auto bg-darkCard border-t border-purple-950/80 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center">
+                    <i class="fa-solid fa-brain text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">WebNova</span>
+            </div>
+            <div class="flex items-center space-x-6 text-sm text-gray-400">
+                <a href="https://wa.me/8801804985929" target="_blank" class="hover:text-emerald-400 transition flex items-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                    <span>WhatsApp: 01804985929</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61594799405714" target="_blank" class="hover:text-blue-400 transition flex items-center space-x-2">
+                    <i class="fa-brands fa-facebook text-blue-400 text-lg"></i>
+                    <span>Facebook Profile</span>
+                </a>
+            </div>
+            <p class="text-xs text-gray-500">&copy; 2026 WebNova AI. Created for Safwan.</p>
+        </div>
+    </footer>
+
+    <!-- Mini-App Modal -->
+    <div id="miniAppModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
+        <div class="glass-panel w-full max-w-4xl h-[85vh] rounded-3xl border border-purple-500/40 flex flex-col overflow-hidden shadow-2xl relative">
+            <div class="bg-gradient-to-r from-purple-900/90 to-pink-900/90 px-6 py-4 flex items-center justify-between border-b border-purple-800/50">
+                <div class="flex items-center space-x-3">
+                    <div id="modalAppIcon" class="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h3 id="modalAppTitle" class="font-bold text-lg text-white">Mini App</h3>
+                        <p id="modalAppSubtitle" class="text-xs text-purple-300">Interactive WebNova Tool</p>
+                    </div>
+                </div>
+                <button onclick="closeMiniApp()" class="text-gray-300 hover:text-white p-2 rounded-xl hover:bg-white/10 transition">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div id="modalAppBody" class="flex-1 overflow-y-auto p-6 bg-darkBg/80"></div>
+        </div>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbotContainer" class="fixed bottom-6 right-6 z-50">
+        <div id="chatWindow" class="hidden flex flex-col w-[92vw] sm:w-[380px] h-[520px] glass-panel rounded-3xl shadow-2xl border border-purple-500/30 overflow-hidden mb-4 transition-all duration-300 transform scale-95 opacity-0">
+            <div class="bg-gradient-to-r from-purple-900/90 to-pink-900/90 px-5 py-4 flex items-center justify-between border-b border-purple-800/50">
+                <div class="flex items-center space-x-3">
+                    <div class="relative w-10 h-10 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center shadow-md overflow-hidden border-2 border-purple-400">
+                        <svg viewBox="0 0 100 100" class="w-8 h-8 text-white fill-current">
+                            <circle cx="50" cy="50" r="42" fill="#7c3aed"/>
+                            <rect x="30" y="40" width="40" height="35" rx="8" fill="#a855f7"/>
+                            <circle cx="40" cy="52" r="6" fill="#3b82f6"/>
+                            <circle cx="60" cy="52" r="6" fill="#3b82f6"/>
+                            <rect x="42" y="62" width="16" height="4" rx="2" fill="#ec4899"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white">WebNova AI Bot</h3>
+                        <p class="text-[11px] text-purple-300">Online | Safwan's Assistant</p>
+                    </div>
+                </div>
+                <button onclick="toggleChatbot()" class="text-gray-300 hover:text-white p-1 rounded-lg"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 bg-darkBg/60 text-sm">
+                <div class="flex items-start space-x-2">
+                    <div class="w-7 h-7 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0 text-white text-xs"><i class="fa-solid fa-robot"></i></div>
+                    <div class="bg-purple-950/70 border border-purple-800/40 rounded-2xl px-4 py-2.5 text-gray-200 max-w-[80%]">
+                        স্বাগতম! Hello! এটি সাফওয়ানের ওয়েবসাইট। আপনি যেকোনো প্রশ্ন করতে পারেন যেমন: "এটা কার ওয়েবসাইট?" বা "এটা কিভাবে বানাইছে?"
+                    </div>
+                </div>
+            </div>
+            <div class="px-3 py-2 bg-darkCard/80 border-t border-purple-950/80 flex gap-2 overflow-x-auto text-xs">
+                <button onclick="sendQuickQuery('এটা কার ওয়েবসাইট?')" class="bg-purple-900/40 border border-purple-700/40 text-purple-200 px-3 py-1 rounded-full whitespace-nowrap">এটা কার ওয়েবসাইট?</button>
+                <button onclick="sendQuickQuery('এটা কিভাবে বানাইছে?')" class="bg-purple-900/40 border border-purple-700/40 text-purple-200 px-3 py-1 rounded-full whitespace-nowrap">এটা কিভাবে বানাইছে?</button>
+            </div>
+            <div class="p-3 bg-darkCard border-t border-purple-900/40 flex items-center space-x-2">
+                <input type="text" id="chatInput" onkeydown="handleChatKeyDown(event)" placeholder="Type a message..." class="flex-1 bg-darkBg border border-purple-900/60 rounded-xl px-4 py-2.5 text-xs text-gray-200 focus:outline-none">
+                <button onclick="sendUserMessage()" class="bg-purple-600 hover:bg-purple-500 text-white w-10 h-10 rounded-xl flex items-center justify-center"><i class="fa-solid fa-paper-plane text-xs"></i></button>
+            </div>
+        </div>
+        <button onclick="toggleChatbot()" class="chatbot-btn-glow w-16 h-16 rounded-full bg-gradient-to-tr from-purple-600 via-pink-600 to-blue-600 text-white flex items-center justify-center shadow-2xl">
+            <svg viewBox="0 0 100 100" class="w-10 h-10 text-white fill-current animate-float">
+                <circle cx="50" cy="50" r="42" fill="#7c3aed"/>
+                <rect x="30" y="40" width="40" height="35" rx="8" fill="#a855f7"/>
+                <circle cx="40" cy="52" r="6" fill="#3b82f6"/>
+                <circle cx="60" cy="52" r="6" fill="#3b82f6"/>
+                <rect x="42" y="62" width="16" height="4" rx="2" fill="#ec4899"/>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        let isChatOpen = false;
+        function toggleChatbot() {
+            isChatOpen = !isChatOpen;
+            const chatWindow = document.getElementById('chatWindow');
+            if (isChatOpen) {
+                chatWindow.classList.remove('hidden');
+                setTimeout(() => { chatWindow.classList.remove('scale-95', 'opacity-0'); chatWindow.classList.add('scale-100', 'opacity-100'); }, 10);
+            } else {
+                chatWindow.classList.remove('scale-100', 'opacity-100');
+                chatWindow.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => chatWindow.classList.add('hidden'), 300);
+            }
+        }
+
+        function sendQuickQuery(text) {
+            document.getElementById('chatInput').value = text;
+            sendUserMessage();
+        }
+
+        function sendUserMessage() {
+            const input = document.getElementById('chatInput');
+            const msg = input.value.trim();
+            if (!msg) return;
+
+            const chatMessages = document.getElementById('chatMessages');
+            chatMessages.innerHTML += `
+                <div class="flex items-end justify-end space-x-2">
+                    <div class="bg-purple-600 text-white rounded-2xl px-4 py-2 text-xs max-w-[80%]">${msg}</div>
+                </div>
+            `;
+            input.value = '';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            setTimeout(() => {
+                let reply = "আমি ওয়েবনাভা (WebNova) এআই অ্যাসিস্ট্যান্ট।";
+                const lower = msg.toLowerCase();
+                if (lower.includes('কার') || lower.includes('safwan') || lower.includes('কে')) {
+                    reply = "এটি সাফওয়ানের ওয়েবসাইট! (This is Safwan's website.)";
+                } else if (lower.includes('কিভাবে') || lower.includes('বানাইছে') || lower.includes('build')) {
+                    reply = "এটা HTML, Tailwind CSS এবং JavaScript দিয়ে অত্যন্ত চমৎকারভাবে তৈরি করা হয়েছে!";
+                } else if (lower.includes('whatsapp') || lower.includes('নম্বর')) {
+                    reply = "যোগাযোগের WhatsApp নম্বর: 01804985929";
+                }
+
+                chatMessages.innerHTML += `
+                    <div class="flex items-start space-x-2">
+                        <div class="w-7 h-7 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0 text-white text-xs"><i class="fa-solid fa-robot"></i></div>
+                        <div class="bg-purple-950/70 border border-purple-800/40 rounded-2xl px-4 py-2.5 text-gray-200 max-w-[80%]">${reply}</div>
+                    </div>
+                `;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 600);
+        }
+
+        function handleChatKeyDown(e) { if (e.key === 'Enter') sendUserMessage(); }
+
+        // Community Form
+        let communityPosts = [
+            { name: "সাফওয়ান", title: "ওয়েবসাইট কেমন লাগলো?", message: "সবাই কেমন আছেন? আমার এই WebNova প্ল্যাটফর্মটি কেমন লাগলো কমেন্ট করে জানান!" }
+        ];
+
+        function renderCommunityPosts() {
+            const list = document.getElementById('communityFeedList');
+            list.innerHTML = communityPosts.map(p => `
+                <div class="glass-panel p-5 rounded-2xl border border-purple-900/40">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-bold text-purple-300 text-sm"><i class="fa-solid fa-user-circle mr-2"></i>${p.name}</span>
+                        <span class="text-xs text-gray-500">${p.title || 'General'}</span>
+                    </div>
+                    <p class="text-sm text-gray-300">${p.message}</p>
+                </div>
+            `).join('');
+        }
+        renderCommunityPosts();
+
+        function handleCommunityPost(e) {
+            e.preventDefault();
+            const name = document.getElementById('commName').value;
+            const title = document.getElementById('commTitle').value;
+            const message = document.getElementById('commMessage').value;
+            communityPosts.unshift({ name, title, message });
+            renderCommunityPosts();
+            document.getElementById('communityForm').reset();
+        }
+
+        // Mini Apps
+        function openMiniApp(name) {
+            const modal = document.getElementById('miniAppModal');
+            const title = document.getElementById('modalAppTitle');
+            const sub = document.getElementById('modalAppSubtitle');
+            const body = document.getElementById('modalAppBody');
+            modal.classList.remove('hidden');
+
+            if (name === 'cowlf') {
+                title.innerText = "Cowlf - Canva-like Design Editor";
+                sub.innerText = "Create custom digital designs";
+                body.innerHTML = `<div class="text-center p-12"><h3 class="text-xl font-bold mb-2 text-purple-300">Cowlf Design Editor</h3><p class="text-gray-400 mb-6">এখানে আপনি আপনার পছন্দমতো শেপ ও টেক্সট যুক্ত করে ডিজাইন করতে পারবেন।</p><div class="bg-darkBg p-8 rounded-2xl border border-purple-800 inline-block text-white text-lg font-bold">WebNova Cowlf Workspace Active</div></div>`;
+            } else if (name === 'sfotiyar') {
+                title.innerText = "Sfotiyar - Music Player";
+                sub.innerText = "Stream AI synthetic beats";
+                body.innerHTML = `<div class="text-center p-12"><h3 class="text-xl font-bold mb-2 text-pink-400">Sfotiyar Audio Player</h3><p class="text-gray-400 mb-6">মিউজিক প্লেয়ার চালু আছে। প্লে বাটনে ক্লিক করে উপভোগ করুন।</p><button onclick="alert('Playing AI Synthwave Beat... 🎶')" class="bg-pink-600 hover:bg-pink-500 text-white px-6 py-3 rounded-xl font-bold"><i class="fa-solid fa-play mr-2"></i>Play Beat</button></div>`;
+            } else if (name === 'videoGen') {
+                title.innerText = "Video Generator - AI Prompt to Video";
+                sub.innerText = "Generate cinematic AI animations";
+                body.innerHTML = `<div class="max-w-md mx-auto text-center p-6"><h3 class="text-xl font-bold mb-2 text-blue-400">Video Generator</h3><p class="text-gray-400 text-sm mb-4">যেকোনো প্রম্পট লিখে ভিডিও জেনারেট করুন:</p><input type="text" placeholder="e.g. Futuristic city animation..." class="w-full bg-darkBg border border-purple-900 rounded-xl px-4 py-3 text-sm text-white mb-4"><button onclick="alert('Rendering Video Simulation... Success! 🎉')" class="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-bold">Generate Video</button></div>`;
+            }
+        }
+        function closeMiniApp() { document.getElementById('miniAppModal').classList.add('hidden'); }
+    </script>
+</body>
+</html>
