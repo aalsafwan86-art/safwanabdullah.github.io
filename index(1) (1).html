@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safwan Business</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f6f8ff;color:#182033;line-height:1.6}
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);box-shadow:0 2px 15px #00000012}
+nav{max-width:1100px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:800;color:#5b4bff}
+nav ul{display:flex;gap:18px;list-style:none}
+nav a{text-decoration:none;color:#222;font-weight:600}
+nav a:hover{color:#5b4bff}
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 20px;background:linear-gradient(135deg,#eef0ff,#fff)}
+.hero h1{font-size:clamp(38px,7vw,72px);margin-bottom:15px}
+.hero h1 span{color:#5b4bff}
+.hero p{font-size:19px;max-width:650px;margin:auto;color:#5b6475}
+.btns{margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:12px;text-decoration:none;font-weight:700;transition:.25s}
+.primary{background:#5b4bff;color:white}.secondary{background:white;color:#5b4bff;border:2px solid #5b4bff}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #0002}
+section{max-width:1100px;margin:auto;padding:80px 20px}
+.title{text-align:center;margin-bottom:40px}
+.title h2{font-size:35px}.title p{color:#697386}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;padding:28px;border-radius:20px;box-shadow:0 8px 25px #0000000d;transition:.25s}
+.card:hover{transform:translateY(-7px);box-shadow:0 15px 35px #5b4bff22}
+.icon{font-size:38px;margin-bottom:10px}
+.card h3{margin-bottom:8px}
+.price{font-size:25px;font-weight:800;color:#5b4bff;margin:12px 0}
+.contact-box{background:#161b2d;color:white;border-radius:25px;padding:45px;text-align:center}
+.contact-box p{color:#d9deed;margin:10px 0 25px}
+footer{text-align:center;background:#111522;color:#bbc2d4;padding:25px}
+.social{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+@media(max-width:750px){
+nav ul{display:none}
+.grid{grid-template-columns:1fr}
+section{padding:60px 18px}
+.hero{min-height:78vh}
+.contact-box{padding:30px 18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">Safwan Business</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div>
+<p>🌐 Welcome to</p>
+<h1>Safwan <span>Business</span></h1>
+<p>আপনার ব্যবসার জন্য সুন্দর Website, Design এবং Digital Service এক জায়গায়।</p>
+<div class="btns">
+<a class="btn primary" href="#services">আমাদের Services</a>
+<a class="btn secondary" href="https://wa.me/8801804985929" target="_blank">WhatsApp করুন</a>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="title">
+<h2>About Us</h2>
+<p>আমাদের সম্পর্কে</p>
+</div>
+<div class="card">
+<h3>আমরা কী করি?</h3>
+<p>আমরা ছোট ব্যবসা, অনলাইন উদ্যোক্তা এবং ব্যক্তিগত ব্র্যান্ডের জন্য সহজ, সুন্দর ও Mobile-Friendly Website এবং Digital Service তৈরি করি।</p>
+</div>
+</section>
+
+<section id="services">
+<div class="title">
+<h2>Services</h2>
+<p>আমাদের জনপ্রিয় সেবাগুলো</p>
+</div>
+<div class="grid">
+<div class="card"><div class="icon">🌐</div><h3>Business Website</h3><p>আপনার ব্যবসার জন্য সুন্দর Responsive Website।</p><div class="price">৳300+</div></div>
+<div class="card"><div class="icon">🎨</div><h3>Social Media Design</h3><p>Facebook পোস্ট, Cover ও অন্যান্য ডিজাইন।</p><div class="price">৳50+</div></div>
+<div class="card"><div class="icon">🤖</div><h3>AI Content</h3><p>AI ব্যবহার করে ছবি ও কনটেন্ট তৈরিতে সহায়তা।</p><div class="price">৳50+</div></div>
+</div>
+</section>
+
+<section id="products">
+<div class="title">
+<h2>Products</h2>
+<p>আমাদের Digital Products</p>
+</div>
+<div class="grid">
+<div class="card"><div class="icon">📱</div><h3>Social Media Template</h3><p>Facebook ও Instagram-এর জন্য Template Pack।</p></div>
+<div class="card"><div class="icon">📄</div><h3>Digital Guide</h3><p>অনলাইন কাজ ও Digital Skill শেখার সহজ Guide।</p></div>
+<div class="card"><div class="icon">🖼️</div><h3>Design Pack</h3><p>ব্যবসা ও Creatorদের জন্য বিভিন্ন Design Pack।</p></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact-box">
+<h2>যোগাযোগ করুন 📩</h2>
+<p>Website বা অন্য কোনো Service নিতে চাইলে আমাদের সঙ্গে যোগাযোগ করুন।</p>
+<div class="social">
+<a class="btn primary" href="https://wa.me/8801804985929" target="_blank">💬 WhatsApp</a>
+<a class="btn secondary" href="https://www.facebook.com/profile.php?id=61595003423727" target="_blank">📘 Facebook</a>
+</div>
+<p style="margin-top:20px">📞 01804985929</p>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2026 Safwan Business. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
